@@ -1,0 +1,34 @@
+/* font-size - размер текста 
+   color - цвет текста
+   font-weight - толщина шрифта
+   text-decoration - задаёт вид декоративных линий в тексте
+   backround-color - изменяет цвет фона
+   height - высота (px или %)
+*/
+
+/* Селекторы по тегу */
+html,
+body {
+  height: 100%;
+}
+
+h3 {
+  font-size: 30px;
+  color: blue;
+}
+
+/* Селектор по классу (точка перед названием) */
+.main-user {
+  background-color: aquamarine;
+}
+
+/* Селектор по id (решётка перед названием)*/
+#company-name {
+  color: brown;
+  text-decoration: underline;
+}
+
+#root {
+  height: 100%;
+  background-color: bisque;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- 3 способ - создание отдельного файла styles.css и привязка его к файлу html
+    привязка происходит с помощью тега link внутри head -->
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <title>dbrzn</title>
+  </head>
+  <body>
+    <div id="root">
+    <header>
+
+    <h1>Ivan Dobroznai</h1>
+    <h3>🔌 dbrzn</h3>
+    <p>Software Developer</p>
+    </header>
+
+    <main>
+      <section>
+        <img 
+            src="./assets/1.jpeg"
+            alt="Ivan Dobroznai"
+        />
+        <h2><span id="about-me">About me</span></h2>
+        <p class="main-user">
+          I am a Java Developer based in Augsburg, Germany, with a strong background in logistics, backend systems, and enterprise applications. I love clean code, clear architecture, and building things that work.
+        </p>
+
+        <section>
+          <h2>My Teck Steck</h2>
+          <ul>
+            <li>Java (Core, Streams, Collections)</li>
+            <li>Spring Boot, Spring Data JPA, Spring Security</li>
+            <li>REST APIs, JSON</li>
+            <li>PostgreSQL, MySQL</li>
+            <li>Maven, Git, Docker</li>
+            <li>JUnit, Mockito</li>
+          </ul>
+        </section>
+
+
+        <section>
+          <h2>Projects</h2>
+          <div>
+            <img 
+            src="./assets/scanner-logo.jpg"
+            alt="scanner-logo"
+            style="width: 80px; height: auto; border-radius: 8px;" />
+          </div>
+          <span id="project">LogiScan</span> <br>
+          <span>A Java-based tool for parcel scanning and route assignment using Excel import/export.
+          </span>
+          
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <ul>
+            <li>Email: i.dobroznai@gmail.com</li>
+            <li>GitHub: <a href="https://github.com/Dobroznai" target="_blank">github.com</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/dobroznai" target="_blank">linkedin.com</a></li>
+            <li>Location: Augsburg, Germany</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        &copy; 2025 Ivan Dobroznai. All rights reserved.
+      </footer>
+    </div>
+  </body>
+</html>

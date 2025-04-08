@@ -1,0 +1,55 @@
+html,
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    font-size: 20px;
+    color: white;
+}
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+  }
+h2  {
+    color: #2c3e50;
+}
+ul, ol {
+    margin-left: 1.5rem;
+  }
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    
+}
+/* Селектор по классу (точка перед названием) */
+.main-user {
+    background-color: rgb(198, 197, 197);
+    font-weight: 40px;
+  }
+
+  /* Селектор по id (решётка перед названием)*/
+#about-me {
+    color: rgb(226, 23, 23);
+    text-decoration: underline;
+  }
+#project {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 20px;
+}
+
+#root {
+    background-color: rgb(219, 219, 219);
+  }
