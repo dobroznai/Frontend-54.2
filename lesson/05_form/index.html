@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 5: Forms</title>
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+  </head>
+  <body>
+    <div id="root">
+      <form class="user_form">
+        <p class="user_form_title">User Form</p>
+        <div class="user_input_conainer" >
+          <label class="user_form_label" for="user_first_name">
+            First Name
+            </label>
+          <input 
+          id="user_first_name" 
+          class="user_form_input" 
+          placeholder="Enter first name"
+          value="John"
+          name="firstName"
+          />
+        </div>
+        <div class="user_input_conainer" >
+            <label class="user_form_label" for="user_last_name">
+              Last Name
+              </label>
+            <input 
+            id="user_last_name" 
+            class="user_form_input" 
+            placeholder="Enter last name"
+            value="Johnson"
+            name="lastName"
+            />
+          </div>
+
+        <div class="user_input_conainer" >
+            <label class="user_form_label" for="user_email">
+              Email
+              </label>
+            <input 
+            id="user_email" 
+            class="user_form_input" 
+            placeholder="Enter email"
+            type="email"
+            />
+          </div>
+
+
+        <div class="user_input_conainer" >
+            <label class="user_form_label" for="user_password">
+                Password
+              </label>
+            <input 
+            id="user_password" 
+            class="user_form_input" 
+            placeholder="Enter password"
+            type="password"
+            />
+          </div>
+
+        <div class="user_input_conainer" >
+            <label class="user_form_label" for="user_job">Job</label>
+              <select name="job" id="user_job" class="user_form_input">
+                <option value="QA">QA</option>
+                <option value="Frontend developer">Frontend developer</option>
+                <option value="Backend developer">Backend developer</option>
+                <option value="Mobile developer">Mobile developer</option>
+                <option value="UI/UX developer">UI/UX developer</option>
+              </select>
+          </div>
+        <!-- Должно находиться внутри тега <form></form> -->
+        <!-- 1. type="submit" - Собирает данные из формы и позволяет ими управлять-->
+        <!-- 2. type="reset" - Чистит введенные данные по умолчанию -->
+        <!-- 3. type="button" - только через добавление функции в JS -->
+
+        <div class="checkbox_container" >
+            <input 
+            id="user_checkbox_input" 
+            class="user_checkbox" 
+
+            type="checkbox"
+            name="agree"
+            />
+            <label class="user_form_label" for="user_checkbox_input">I agree with the privacy Policy</label>
+          </div>
+          
+          <button type="submit" class="create_user">Create user</button> 
+
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+f

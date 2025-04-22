@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.car {
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.car_image {
+  width: 350px;
+  height: 150p;
+  margin-bottom: 20px;
+}
+
+.header {
+  /* visibility: hidden; */
+  /* display: none; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 80px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.carlogo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.carNavigation {
+  display: flex;
+  gap: 50px;
+}
+
+.navlink {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 50px;
+  padding: 50px;
+  justify-content: center;
+  background-color: red;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 50px;
+}

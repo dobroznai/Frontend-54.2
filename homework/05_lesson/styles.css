@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(26, 35, 53);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.user_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 500px;
+  max-height: fit-content;
+  width: 500px;
+  padding: 40px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.user_form_title {
+  font-size: 30px;
+  font-weight: bolt;
+  color: gray;
+  text-align: center;
+}
+
+.user_form_input {
+  outline: none; /*убираем цвет границы (эффект) */
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.user_input_conainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user_form_label {
+  font-size: 18px;
+}
+
+.checkbox_container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.user_checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.send_request {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(70, 70, 70);
+  color: white;
+  border: none;
+  cursor: pointer; /* https://developer.mozilla.org/ru/docs/Web/CSS/cursor */
+  border-radius: 4px;
+}
+
+.clear_form {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(183, 100, 100);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+sup {
+  color: red;
+}
+.user-textarea {
+  min-width: 100px;
+  max-width: 100%;
+  min-height: 80px;
+  max-height: 300px;
+  background-color: transparent;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 4px;
+  outline: none;
+}
