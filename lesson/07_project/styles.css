@@ -1,0 +1,9 @@
+main {
+  background-color: black;
+
+  background-image: url(./assets/12.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}

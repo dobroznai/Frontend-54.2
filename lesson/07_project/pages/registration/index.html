@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum</title>
+    <link
+      rel="stylesheet"
+      href="../../commonStyles/globalStyles.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../commonStyles/elements.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <a href="../../index.html" class="company-name">CinemaApp</a>
+        <nav>
+          <a href="../film/">Фильмы</a>
+          <a href="../serial/">Сериалы</a>
+          <a href="../cartoon/">Мультфильмы</a>
+        </nav>
+        <nav>
+          <a class="registration" href="./index.html">Войти</a>
+        </nav>
+      </header>
+      <main>
+        <form class="user_form">
+          <p class="user_form_title">Регистрация</p>
+          <div class="user_input_container">
+            <label class="user_form_label" for="user_first_name"> Имя </label>
+            <input
+              id="user_first_name"
+              class="user_form_input"
+              placeholder="Введите имя"
+              name="firstName"
+            />
+          </div>
+          <div class="user_input_container">
+            <label class="user_form_label" for="user_last_name">
+              Фамилия
+            </label>
+            <input
+              id="user_last_name"
+              class="user_form_input"
+              placeholder="Введите фамилию"
+              name="lastName"
+            />
+          </div>
+          <div class="user_input_container">
+            <label class="user_form_label" for="user_email">Емейл</label>
+            <input
+              required
+              id="user_email"
+              class="user_form_input"
+              placeholder="Введите емейл"
+              type="email"
+              name="email"
+            />
+          </div>
+          <div class="user_input_container">
+            <label class="user_form_label" for="user_password">Пароль</label>
+            <input
+              id="user_password"
+              class="user_form_input"
+              placeholder="Введите пароль"
+              type="password"
+              name="password"
+            />
+          </div>
+          <div class="user_input_container">
+            <label class="user_form_label" for="user_phone_number"
+              >Номер телефона</label
+            >
+            <input
+              id="user_phone_number"
+              class="user_form_input"
+              placeholder="Введите номер телефона"
+              type="phone_number"
+              name="phone_number"
+            />
+          </div>
+
+          <div class="user_input_container">
+            <label class="user_form_label" for="user_categories"
+              >Категории</label
+            >
+            <select
+              name="user_categories"
+              id="user_categories"
+              class="user_form_input"
+            >
+              <option value="Film">Фильмы</option>
+              <option value="Serial">Сериалы</option>
+              <option value="Cartoons">Мультфильмы</option>
+              <option value="TV_schou">ТВ-Шоу</option>
+              <option value="Dorama">Дорамы</option>
+            </select>
+          </div>
+          <div class="user_input_container">
+            <label class="user_form_label" for="user_genres">Жанры</label>
+            <select name="user_genres" id="user_genres" class="user_form_input">
+              <option value="Comedies">Комедии</option>
+              <option value="Melodramas">Мелодрамы</option>
+              <option value="Adventures">Приключерия</option>
+              <option value="Sci-Fi">Фантастика</option>
+              <option value="Documentary">Документальные</option>
+            </select>
+          </div>
+          <div class="checkbox_container">
+            <input
+              id="user_checkbox_input"
+              class="user_checkbox"
+              type="checkbox"
+              name="agree"
+            />
+            <label class="user_form_label" for="user_checkbox_input"
+              >I agree with the privacy Policy</label
+            >
+          </div>
+          <div class="checkbox_container">
+            <input
+              id="user_checkbox_input"
+              class="user_checkbox"
+              type="checkbox"
+              name="news"
+            />
+            <label class="user_form_label" for="user_checkbox_input"
+              >Подписаться на розсилку</label
+            >
+          </div>
+
+          <button class="create_user">Ввойти</button>
+        </form>
+      </main>
+
+      <footer>
+        <div class="footer">
+          <a class="footer-main-text">О нас</a>
+          <a>О компании</a>
+          <a>Вакансии</a>
+          <a>Программа бета-тестирования</a>
+          <a>Информация для партнёров</a>
+          <a>Размещение рекламы</a>
+          <a>Пользовательское соглашение</a>
+          <a>Политика конфиденциальности</a>
+          <a>Комплаенс</a>
+          <a>Оставить отзыв </a>
+        </div>
+        <nav class="footer">
+          <a class="footer-main-text">Разделы</a>
+          <a href="./pages/film/index.html">Фильмы</a>
+          <a href="./pages/serial/index.html">Сериалы</a>
+          <a href="./pages/cartoon/">Мультфильмы</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

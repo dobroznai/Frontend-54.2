@@ -1,0 +1,80 @@
+
+#root {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  background-color: rgb(26, 35, 53);
+  background-image: url(https://img.freepik.com/free-vector/modern-desktop-background-geometric-blue-design-vector_53876-135923.jpg?ga=GA1.1.1730725748.1744665483&semt=ais_hybrid&w=740);
+}
+
+.user_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 500px;
+  max-height: fit-content;
+  width: 500px;
+  padding: 40px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: rgb(78, 78, 225);
+}
+
+.user_form_title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.user_form_input {
+  outline: none;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.user_input_container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user_form_label {
+  font-size: 18px;
+}
+.user_form_input::placeholder {
+  color: rgb(60, 83, 83);
+  font-size: 12px;
+}
+
+.create_user {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(57, 57, 116);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.create_user:hover {
+  background-color: rgb(22, 22, 73);
+  box-shadow: 0px 0px 8px;
+}
+
+.checkbox_container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.user_checkbox {
+  width: 20px;
+  height: 20px;
+}
