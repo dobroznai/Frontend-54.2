@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <link rel="stylesheet" href="./commonStyles/globalStyles.css" />
+    <link rel="stylesheet" href="./commonStyles/elements.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    />
+    <script defer async src="./index.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <a class="company-name"> Сalc ideal weight </a>
+      </header>
+      <main>
+        <form class="user-form">
+          <div class="user-input-container">
+            <label class="user-form-label" for="user-height"> Рост, см* </label>
+            <input
+              required
+              name="user-height"
+              id="user-height"
+              class="user-form-input"
+              placeholder="Введите свой рост"
+              type="number"
+            />
+          </div>
+          <div class="user-input-container">
+            <label class="user-form-label" for="user-gender">
+              Выберете пол*
+            </label>
+            <select
+              required
+              name="user_gender"
+              id="user-gender"
+              class="user-form-input"
+            >
+              <option value="Male" selected>Мужской</option>
+              <option value="Female">Женский</option>
+            </select>
+          </div>
+          <button type="submit" class="calculate calculate-text">
+            Рассчитать
+          </button>
+        </form>
+        <div id="result" class="calculate-text"></div>
+      </main>
+      <footer>
+        <a>create by @dobroznai.code</a>
+      </footer>
+    </div>
+  </body>
+</html>
