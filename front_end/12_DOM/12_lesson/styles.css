@@ -22,11 +22,10 @@ main {
   justify-content: center;
 
   gap: 15px;
-  min-height: 500px;
+  min-height: fit-content;
   max-height: fit-content;
   width: 500px;
   padding: 40px;
-  background-color: transparent;
 }
 
 .user-input-container {
@@ -70,4 +69,11 @@ main {
 .calculate-text {
   font-family: "Inter", sans-serif;
   font-size: 18px;
+}
+
+.result-text {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c2c2c;
 }

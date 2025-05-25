@@ -36,16 +36,14 @@ function result(userGender, height) {
     let idealWeight;
     if (userGender === "Male") {
       idealWeight = height - (100 + (height - 100) / 10);
-      (resultId.textContent = "Идеальный вес (мужчина):") +
-        idealWeight.toFixed(3) +
-        "кг";
+      resultId.textContent =
+        "Идеальный вес (мужчина): " + idealWeight.toFixed(3) + " кг";
     } else {
       idealWeight = height - (100 + (height - 100) / 20);
-      (resultId.textContent = "Идеальный вес (женщина):") +
-        idealWeight.toFixed(3) +
-        "кг";
+      resultId.textContent =
+        "Идеальный вес (женщина): " + idealWeight.toFixed(3) + " кг";
     }
   } else {
-    resultId.textContent = "❌ Введите верные данные";
+    resultId.textContent = "Введите верные данные";
   }
 }
