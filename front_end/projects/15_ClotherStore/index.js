@@ -240,3 +240,6 @@ const products = [
     imgUrl: "some_URL",
   },
 ];
+
+const typeJeans = products.filter((product) => product.type === "Jeans");
+console.log(typeJeans);
