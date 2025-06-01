@@ -35,12 +35,6 @@ a {
   min-height: 100%;
 }
 
-/* img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-} */
-
 .container {
   max-width: 1600px;
   margin: 0 auto; /* центрирование */
