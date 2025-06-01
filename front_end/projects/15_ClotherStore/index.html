@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clothes Store</title>
+    <title>>>>>Clothes Store</title>
     <link rel="stylesheet" href="./styles.css" type="text/css" />
     <link rel="stylesheet" href="./commonStyles/globalStyles.css" />
     <link rel="stylesheet" href="./commonStyles/elements.css" />
@@ -23,12 +22,12 @@
           <a href="#">Create an account</a>
         </div>
         <!-- Блок навигации и логотипа -->
-        <div class="header">
+        <div class="header container">
           <div class="header_link">
             <!-- label -->
             <div class="logo">
               <a href="./index.html" target="_blank" title="Clothes Store">
-                <img src="./assets/label.png" alt="Photo label" />
+                <img src="assets/label.png" alt="Photo label" />
               </a>
             </div>
             <!-- Окно поиска -->
@@ -40,7 +39,7 @@
                 autofocus
               />
               <button id="searchButton" title="Search" type="submit">
-                <img src="./assets/search.png" alt="Search" />
+                <img src="assets/search.png" alt="Search" />
               </button>
             </div>
           </div>
@@ -48,24 +47,20 @@
             <div class="header_icon">
               <nav>
                 <a href="#">
+                  <img src="assets/user.png" alt="User" title="User" />
+                </a>
+                <a href="#">
                   <img
-                    src="./assets/buy.png"
-                    alt="Photo wishlist"
-                    title="Buy"
+                    src="assets/heart.png"
+                    alt="Favorite item"
+                    title="Favorite item"
                   />
                 </a>
                 <a href="#">
                   <img
-                    src="./assets/myacount.png"
-                    alt="Photo my acount"
-                    title="My acount"
-                  />
-                </a>
-                <a href="#">
-                  <img
-                    src="./assets/burger-menu.png"
-                    alt="Photo menu"
-                    title="Menu"
+                    src="assets/shopping-cart.png"
+                    alt="Shopping cart"
+                    title="Shopping cart"
                   />
                 </a>
               </nav>
@@ -74,46 +69,54 @@
         </div>
         <!-- Навигация -->
         <nav class="nav_container">
-          <a href="#">New</a>
-          <a href="#">Women</a>
-          <a href="#">Men</a>
-          <a href="#"><span class="outlet">Outlet</span></a>
+          <div class="nav_inner container">
+            <a href="#">New</a>
+            <a href="#">Women</a>
+            <a href="#">Men</a>
+            <a href="#"><span class="outlet">Outlet</span></a>
+          </div>
         </nav>
         <!-- Фильтры -->
-        <form class="filters" id="allFilters">
+        <div class="filters_header container">
+          <span id="productCount">Products Found (0)</span>
+        </div>
+        <form id="allFilters" class="filters container">
           <label>
-            Choose Product:
+            Choose product:
             <select id="typeFilter" name="type_product">
-              <option value="All" selected>All</option>
+              <option value="All" selected>-</option>
               <option value="Jeans">Jeans</option>
               <option value="T-shirt">T-shirt</option>
               <option value="Jacket">Jacket</option>
               <option value="Sweater">Sweater</option>
             </select>
           </label>
-          <label>
-            Gender:
+
+          <label
+            >Gender:
             <select id="genderFilter" name="gender">
-              <option value="All" selected>All</option>
+              <option value="All" selected>-</option>
               <option value="Men">Men</option>
               <option value="Women">Women</option>
             </select>
           </label>
+
           <label>
             Price:
             <select id="priceFilter" name="price">
-              <option value="All" selected>All</option>
+              <option value="All" selected>-</option>
               <option value="0-300">0-300</option>
               <option value="301-600">301-600</option>
               <option value="From 601">From 601</option>
             </select>
           </label>
-          <button id="productSearchButton" type="submit">Search</button>
-          <button id="productClearrButton" type="reset">Clear</button>
-          <!-- id="clearFilterButton" -->
+          <div>
+            <button id="productSearchButton" type="submit">Search</button>
+            <button id="productClearButton" type="reset">Clear</button>
+          </div>
         </form>
       </header>
-      <!-- новинки -->
+      <!-- Баннер по новинкам -->
       <div class="new_products_banner">
         <a href="#" target="_blank" title="New Products">
           <img src="assets/summer-denim.jpg" alt="new_products_banner" />
@@ -152,10 +155,12 @@
             </div>
             <div>
               <h4>Privacy & Legal</h4>
-              <li><a href="#">Privacy & Cookie Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Manually Manage Cookies</a></li>
-              <li><a href="#">Imprint</a></li>
+              <ul>
+                <li><a href="#">Privacy & Cookie Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Manually Manage Cookies</a></li>
+                <li><a href="#">Imprint</a></li>
+              </ul>
             </div>
             <div>
               <h4>Collections</h4>
@@ -172,7 +177,7 @@
                 <li><p>32098 CityTown, Land</p></li>
                 <li><p>Mode street, 152</p></li>
                 <li><p>Tel.: +49432989436</p></li>
-                <li><p>E-mail: info.@clothestore.com</p></li>
+                <li><p>E-mail: info@clothestore.com</p></li>
               </ul>
             </div>
           </div>
