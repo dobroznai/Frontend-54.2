@@ -4,36 +4,197 @@
     <title></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothes Store</title>
     <link rel="stylesheet" href="./styles.css" type="text/css" />
     <link rel="stylesheet" href="./commonStyles/globalStyles.css" />
     <link rel="stylesheet" href="./commonStyles/elements.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    />
     <script src="./index.js" defer></script>
   </head>
   <body>
     <div id="root">
       <header>
-        <a href="./index.html" class="company-name"></a>
-        <nav class="nav">
-
-        </nav>
-        <nav>
-          <a class="registration" href="#">Войти</a>
-        </nav>
-      </header>
-      <main class="main">
-        <div 
-
-
-
+        <!-- Скидка на регистрацию нового участника -->
+        <div class="promo_information">
+          Free Delivery over €40 and free returns |
+          <a href="#">Create an account</a>
         </div>
+        <!-- Блок навигации и логотипа -->
+        <div class="header">
+          <div class="header_link">
+            <!-- label -->
+            <div class="logo">
+              <a href="./index.html" target="_blank" title="Clothes Store">
+                <img src="./assets/label.png" alt="Photo label" />
+              </a>
+            </div>
+            <!-- Окно поиска -->
+            <div class="search_products">
+              <input
+                id="searchInput"
+                placeholder="Search product or brand"
+                type="search"
+                autofocus
+              />
+              <button id="searchButton" title="Search" type="submit">
+                <img src="./assets/search.png" alt="Search" />
+              </button>
+            </div>
+          </div>
+          <div class="header_right">
+            <div class="header_icon">
+              <nav>
+                <a href="#">
+                  <img
+                    src="./assets/buy.png"
+                    alt="Photo wishlist"
+                    title="Buy"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="./assets/myacount.png"
+                    alt="Photo my acount"
+                    title="My acount"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="./assets/burger-menu.png"
+                    alt="Photo menu"
+                    title="Menu"
+                  />
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- Навигация -->
+        <nav class="nav_container">
+          <a href="#">New</a>
+          <a href="#">Women</a>
+          <a href="#">Men</a>
+          <a href="#"><span class="outlet">Outlet</span></a>
+        </nav>
+        <!-- Фильтры -->
+        <form class="filters" id="allFilters">
+          <label>
+            Choose Product:
+            <select id="typeFilter" name="type_product">
+              <option value="All" selected>All</option>
+              <option value="Jeans">Jeans</option>
+              <option value="T-shirt">T-shirt</option>
+              <option value="Jacket">Jacket</option>
+              <option value="Sweater">Sweater</option>
+            </select>
+          </label>
+          <label>
+            Gender:
+            <select id="genderFilter" name="gender">
+              <option value="All" selected>All</option>
+              <option value="Men">Men</option>
+              <option value="Women">Women</option>
+            </select>
+          </label>
+          <label>
+            Price:
+            <select id="priceFilter" name="price">
+              <option value="All" selected>All</option>
+              <option value="0-300">0-300</option>
+              <option value="301-600">301-600</option>
+              <option value="From 601">From 601</option>
+            </select>
+          </label>
+          <button id="productSearchButton" type="submit">Search</button>
+          <button id="productClearrButton" type="reset">Clear</button>
+          <!-- id="clearFilterButton" -->
+        </form>
+      </header>
+      <!-- новинки -->
+      <div class="new_products_banner">
+        <a href="#" target="_blank" title="New Products">
+          <img src="assets/summer-denim.jpg" alt="new_products_banner" />
+        </a>
+      </div>
 
+      <main class="cards_container" id="productContainer"></main>
 
-      </main>
       <footer>
         <div class="footer">
-          <a class="footer-main-text">О нас</a>
-
-    </footer>
+          <div class="footer_top">
+            <div class="payments">
+              <img src="assets/apple_pay_icon.png" alt="apple pay" />
+              <img src="assets/mastercard_payment_icon.png" alt="mastercard" />
+              <img src="assets/paypal_icon.png" alt="paypal" />
+              <img src="assets/visa_payment_icon.png" alt="visa" />
+            </div>
+            <p>Our Social Networks</p>
+            <div class="social">
+              <a href="#"><img src="assets/instagram.png" alt="Instagram" /></a>
+              <a href="#"><img src="assets/facebook.png" alt="Facebook" /></a>
+              <a href="#"><img src="assets/tik-tok.png" alt="TikTok" /></a>
+              <a href="#"><img src="assets/youtube.png" alt="YouTube" /></a>
+            </div>
+          </div>
+          <div class="footer_main">
+            <div>
+              <h4>Help & Support</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Orders & Delivery</a></li>
+                <li><a href="#">Returns & Refunds</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Size Guide</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Privacy & Legal</h4>
+              <li><a href="#">Privacy & Cookie Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Manually Manage Cookies</a></li>
+              <li><a href="#">Imprint</a></li>
+            </div>
+            <div>
+              <h4>Collections</h4>
+              <ul>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Special Price</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Contact</h4>
+              <ul>
+                <li><p>32098 CityTown, Land</p></li>
+                <li><p>Mode street, 152</p></li>
+                <li><p>Tel.: +49432989436</p></li>
+                <li><p>E-mail: info.@clothestore.com</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-site">
+          <a href="#">View mobile site</a>
+        </div>
+        <div>
+          <p>&copy; 2025. All rights reserved.</p>
+        </div>
+      </footer>
+      <!-- Стрелка -->
+      <div class="arrow_up_box">
+        <a href="#allFilters">
+          <img
+            class="arrow_up"
+            src="assets/go_to_top.jpg"
+            alt="arrow up"
+            title="Back to filters"
+          />
+        </a>
+      </div>
     </div>
   </body>
 </html>
