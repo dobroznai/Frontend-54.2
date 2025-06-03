@@ -242,118 +242,86 @@ const products = [
 ];
 
 ///////////////////////////////////////////////////////////////////
-const CARDS_CONTAINER = document.getElementById("productContainer");
-const TYPE_SELECT = document.getElementById("typeFilter");
-const GENDER_SELECT = document.getElementById("genderFilter");
-const STATUS_SELECT = document.getElementById("statusFilter");
-const PRISE_SELECT = document.getElementById("priceFilter");
+// Функция для отображения количества товаров
+function updateProductCount(count) {
+  const countElement = document.getElementById("productCount");
+  countElement.textContent = `Products Found (${count}) `;
+}
 
-// Создание одной карточки товара
-function createCard(product) {
-  const CARD = document.createElement("div");
-  CARD.classList.add("card");
-  CARD.innerHTML = `
-    <img class="card_img" src="${product.imgUrl}" alt="${product.type}">
+// Функция для проверки цены
+function checkPrice(productPrice, filterValue) {
+  if (filterValue === "Default") return true;
+
+  if (filterValue === "0-300") return productPrice <= 300;
+  if (filterValue === "301-600")
+    return productPrice > 300 && productPrice <= 600;
+  if (filterValue === "From 601") return productPrice > 600;
+
+  return true;
+}
+
+// Основная функция фильтрации
+function filterProducts() {
+  const typeValue = document.getElementById("typeFilter").value;
+  const genderValue = document.getElementById("genderFilter").value;
+  const priceValue = document.getElementById("priceFilter").value;
+  const statusValue = document.getElementById("statusFilter").value;
+
+  const filteredProducts = products.filter((product) => {
+    const typeMatch = typeValue === "Default" || product.type === typeValue;
+    const genderMatch =
+      genderValue === "Default" || product.gender === genderValue;
+    const priceMatch = checkPrice(product.price, priceValue);
+    const statusMatch =
+      statusValue === "Default" || product.status === statusValue;
+
+    return typeMatch && genderMatch && priceMatch && statusMatch;
+  });
+
+  createCard(filteredProducts);
+  updateProductCount(filteredProducts.length);
+}
+
+// Функция для отображения товаров
+function createCard(productsToRender) {
+  const container = document.getElementById("productContainer");
+  container.innerHTML = "";
+
+  productsToRender.forEach((product) => {
+    const CARD = document.createElement("div");
+    CARD.className = "card";
+    CARD.innerHTML = `
+        <img class="card_img" src="${product.imgUrl}" alt="${product.type}">
     <h3>${product.type}</h3>
     <p>${product.price} $</p>
     <p>${product.gender}</p>
     <div class="card_status">${product.status}</div>
   `;
-  return CARD;
-}
-
-// Отображение товаров в контейнере
-function displayProducts(products) {
-  CARDS_CONTAINER.innerHTML = "";
-  if (products.length === 0) {
-    CARDS_CONTAINER.innerHTML = "<p>Нет товаров по фильтру.</p>";
-    return;
-  }
-
-  products.forEach((product) => {
-    const card = createCard(product);
-    CARDS_CONTAINER.appendChild(card);
+    container.appendChild(CARD);
   });
 }
 
-// Фильтрация товаров по выбранным фильтрам
-function filterProducts() {
-  const type = TYPE_SELECT.value;
-  const gender = GENDER_SELECT.value;
-  const status = STATUS_SELECT.value;
-
-  const filtered = products.filter((p) => {
-    return (
-      (type === "Default" || p.type === type) &&
-      (gender === "Default" || p.gender === gender) &&
-      (status === "Default" || p.status === status)
-    );
+// Обработчики событий
+document
+  .getElementById("productSearchButton")
+  .addEventListener("click", (e) => {
+    e.preventDefault();
+    filterProducts();
   });
 
-  displayProducts(filtered);
-}
-
-// Слушатели событий на фильтры
-TYPE_SELECT.addEventListener("change", filterProducts);
-GENDER_SELECT.addEventListener("change", filterProducts);
-STATUS_SELECT.addEventListener("change", filterProducts);
-
-// Начальное отображение всех товаров
-displayProducts(products);
-
-//////////////////////////////////////////////////////////////////
-//Отображение количества карточек на экране
-function updateProductCount(count) {
-  document.getElementById(
-    "productCount"
-  ).textContent = `Products Found (${count})`;
-}
-1;
-// Инициализация
-updateProductCount(products.length);
-
-// /////////////////////////////////////////////////////////////////
-// //Отображение количества карточек на экране после фильтра
-function filterProducts() {
-  const type = document.getElementById("typeFilter").value;
-  const gender = document.getElementById("genderFilter").value;
-  const price = document.getElementById("priceFilter").value;
-  const status = document.getElementById("statusFilter").value;
-
-  const filtered = products.filter((product) => {
-    let match = true;
-
-    if (TYPE_SELECT !== "Default" && product.type !== type) match = false;
-    if (GENDER_SELECT !== "Default" && product.gender !== gender) match = false;
-
-    if (PRISE_SELECT !== "Default") {
-      const [min, max] =
-        PRISE_SELECT === "From 601"
-          ? [601, Infinity]
-          : PRISE_SELECT.split("-").map(Number);
-      if (product.price < min || product.price > max) match = false;
-    }
-    if (STATUS_SELECT !== "Default" && product.status !== status) match = false;
-
-    return match;
-  });
-
-  updateProductCount(filtered.length);
-}
-
-document.getElementById("allFilters").addEventListener("submit", function (e) {
+document.getElementById("productClearButton").addEventListener("click", (e) => {
   e.preventDefault();
-  filterProducts();
+  document.getElementById("allFilters").reset();
+  filterProducts(); // После сбрасывания фильтров показываем все товары
 });
 
-document.getElementById("allFilters").addEventListener("reset", function () {
-  setTimeout(() => {
-    updateProductCount(products.length);
-  }, 0);
+// Инициализация при загрузке страницы
+document.addEventListener("DOMContentLoaded", () => {
+  createCard(products);
+  updateProductCount(products.length);
 });
 
 ////////////////////////////////////////////////////////////////
-//Кнопка Scroll Up To Filters
 
 // Получаем кнопку
 const scrollToTopFilters = document.getElementById("scrollToFiltersBtn");
