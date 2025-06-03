@@ -36,7 +36,8 @@ a {
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1750px;
   margin: 0 auto; /* центрирование */
-  padding: 0px 25px; /* чуть отступов по бокам */
+  padding-left: 25px; /* чуть отступов слева */
+  padding-right: 25px; /* чуть отступов справа */
 }

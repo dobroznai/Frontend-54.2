@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-        <!-- Навигация -->
+        <!-- Навигация по контенту -->
         <nav class="nav_container">
           <div class="nav_inner container">
             <a href="#">New</a>
@@ -76,48 +76,63 @@
             <a href="#"><span class="outlet">Outlet</span></a>
           </div>
         </nav>
-        <!-- Фильтры -->
-        <div class="filters_header container">
-          <span id="productCount">Products Found (0)</span>
-        </div>
-        <form id="allFilters" class="filters container">
-          <label>
-            Choose product:
-            <select id="typeFilter" name="type_product">
-              <option value="All" selected>-</option>
-              <option value="Jeans">Jeans</option>
-              <option value="T-shirt">T-shirt</option>
-              <option value="Jacket">Jacket</option>
-              <option value="Sweater">Sweater</option>
-            </select>
-          </label>
-
-          <label
-            >Gender:
-            <select id="genderFilter" name="gender">
-              <option value="All" selected>-</option>
-              <option value="Men">Men</option>
-              <option value="Women">Women</option>
-            </select>
-          </label>
-
-          <label>
-            Price:
-            <select id="priceFilter" name="price">
-              <option value="All" selected>-</option>
-              <option value="0-300">0-300</option>
-              <option value="301-600">301-600</option>
-              <option value="From 601">From 601</option>
-            </select>
-          </label>
-          <div>
-            <button id="productSearchButton" type="submit">Search</button>
-            <button id="productClearButton" type="reset">Clear</button>
-          </div>
-        </form>
       </header>
       <!-- Основные карточки по продукту -->
-      <main class="cards_container" id="productContainer"></main>
+      <main class="main">
+        <!-- Фильтры -->
+        <div>
+          <div class="filters_header container">
+            <span id="productCount"></span>
+          </div>
+          <div>
+            <form id="allFilters" class="filters container">
+              <label>
+                Choose product:
+                <select id="typeFilter" name="type_product">
+                  <option value="Default" selected>-</option>
+                  <option value="Jeans">Jeans</option>
+                  <option value="T-shirt">T-shirt</option>
+                  <option value="Jacket">Jacket</option>
+                  <option value="Sweater">Sweater</option>
+                </select>
+              </label>
+
+              <label
+                >Gender:
+                <select id="genderFilter" name="gender">
+                  <option value="Default" selected>-</option>
+                  <option value="Men">Men</option>
+                  <option value="Women">Women</option>
+                </select>
+              </label>
+
+              <label>
+                Price:
+                <select id="priceFilter" name="price">
+                  <option value="Default" selected>-</option>
+                  <option value="0-300">0-300</option>
+                  <option value="301-600">301-600</option>
+                  <option value="From 601">From 601</option>
+                </select>
+              </label>
+
+              <label>
+                Status:
+                <select id="statusFilter" name="status">
+                  <option value="Default" selected>-</option>
+                  <option value="In stock">In stock</option>
+                  <option value="Out of stock">Out of stock</option>
+                </select>
+              </label>
+              <div>
+                <button id="productSearchButton" type="submit">Search</button>
+                <button id="productClearButton" type="reset">Clear</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="cards_container container" id="productContainer"></div>
+      </main>
       <!-- Подвал сайта  -->
       <footer class="footer">
         <div class="footer_top container">
@@ -171,8 +186,8 @@
             <ul>
               <li><p>32098 CityTown, Land</p></li>
               <li><p>Mode street, 152</p></li>
-              <li><p>Tel.: +49432989436</p></li>
-              <li><p>E-mail: info@clothestore.com</p></li>
+              <li><p>+49432989436</p></li>
+              <li><p>info@clothestore.com</p></li>
             </ul>
           </div>
         </div>
@@ -184,12 +199,11 @@
         </div>
       </footer>
       <!-- Стрелка -->
-      <div class="arrow_up_box">
+      <div class="scroll_to_filters container" id="scrollToFiltersBtn">
         <a href="#allFilters">
           <img
-            class="arrow_up"
             src="assets/sort-amount-up.png"
-            alt="arrow up"
+            alt="Scroll to filters"
             title="Back to filters"
           />
         </a>
