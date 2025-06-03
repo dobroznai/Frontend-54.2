@@ -246,6 +246,7 @@ const CARDS_CONTAINER = document.getElementById("productContainer");
 const TYPE_SELECT = document.getElementById("typeFilter");
 const GENDER_SELECT = document.getElementById("genderFilter");
 const STATUS_SELECT = document.getElementById("statusFilter");
+const PRISE_SELECT = document.getElementById("priceFilter");
 
 // Создание одной карточки товара
 function createCard(product) {
@@ -307,46 +308,49 @@ function updateProductCount(count) {
     "productCount"
   ).textContent = `Products Found (${count})`;
 }
+1;
 // Инициализация
 updateProductCount(products.length);
 
 // /////////////////////////////////////////////////////////////////
 // //Отображение количества карточек на экране после фильтра
-// function filterProducts() {
-//   const type = document.getElementById("typeFilter").value;
-//   const gender = document.getElementById("genderFilter").value;
-//   const price = document.getElementById("priceFilter").value;
-//   const status = document.getElementById("statusFilter").value;
+function filterProducts() {
+  const type = document.getElementById("typeFilter").value;
+  const gender = document.getElementById("genderFilter").value;
+  const price = document.getElementById("priceFilter").value;
+  const status = document.getElementById("statusFilter").value;
 
-//   const filtered = products.filter((product) => {
-//     let match = true;
+  const filtered = products.filter((product) => {
+    let match = true;
 
-//     if (type !== "Default" && product.type !== type) match = false;
-//     if (gender !== "Default" && product.gender !== gender) match = false;
+    if (TYPE_SELECT !== "Default" && product.type !== type) match = false;
+    if (GENDER_SELECT !== "Default" && product.gender !== gender) match = false;
 
-//     if (price !== "Default") {
-//       const [min, max] =
-//         price === "From 601" ? [601, Infinity] : price.split("-").map(Number);
-//       if (product.price < min || product.price > max) match = false;
-//     }
-//     if (status !== "Default" && product.status !== status) match = false;
+    if (PRISE_SELECT !== "Default") {
+      const [min, max] =
+        PRISE_SELECT === "From 601"
+          ? [601, Infinity]
+          : PRISE_SELECT.split("-").map(Number);
+      if (product.price < min || product.price > max) match = false;
+    }
+    if (STATUS_SELECT !== "Default" && product.status !== status) match = false;
 
-//     return match;
-//   });
+    return match;
+  });
 
-//   updateProductCount(filtered.length);
-// }
+  updateProductCount(filtered.length);
+}
 
-// document.getElementById("allFilters").addEventListener("submit", function (e) {
-//   e.preventDefault();
-//   filterProducts();
-// });
+document.getElementById("allFilters").addEventListener("submit", function (e) {
+  e.preventDefault();
+  filterProducts();
+});
 
-// document.getElementById("allFilters").addEventListener("reset", function () {
-//   setTimeout(() => {
-//     updateProductCount(products.length);
-//   }, 0);
-// });
+document.getElementById("allFilters").addEventListener("reset", function () {
+  setTimeout(() => {
+    updateProductCount(products.length);
+  }, 0);
+});
 
 ////////////////////////////////////////////////////////////////
 //Кнопка Scroll Up To Filters
