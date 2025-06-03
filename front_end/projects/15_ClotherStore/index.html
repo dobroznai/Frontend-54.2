@@ -80,7 +80,7 @@
       <!-- Основные карточки по продукту -->
       <main class="main">
         <!-- Фильтры -->
-        <div>
+        <section id="filters" class="filters_section">
           <div class="filters_header container">
             <span id="productCount"></span>
           </div>
@@ -130,8 +130,10 @@
               </div>
             </form>
           </div>
-        </div>
-        <div class="cards_container container" id="productContainer"></div>
+        </section>
+        <section class="product_section">
+          <div class="cards_container container" id="productContainer"></div>
+        </section>
       </main>
       <!-- Подвал сайта  -->
       <footer class="footer">
@@ -200,7 +202,7 @@
       </footer>
       <!-- Стрелка -->
       <div class="scroll_to_filters container" id="scrollToFiltersBtn">
-        <a href="#allFilters">
+        <a href="#filters">
           <img
             src="assets/sort-amount-up.png"
             alt="Scroll to filters"

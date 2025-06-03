@@ -134,6 +134,14 @@
 
 /* Фильтр */
 
+.filters_section {
+  background: #f8f9fa;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+}
+
 .filters_header {
   display: flex;
   justify-content: flex-start;
@@ -182,9 +190,6 @@
 
 /* Главный контейнер */
 .main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   background-color: white;
   padding-top: 200px;
   padding-bottom: 20px;
