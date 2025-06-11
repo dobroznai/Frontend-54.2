@@ -5,7 +5,7 @@ const products = [
     gender: "men",
     price: 250,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_1",
+    imgUrl: "./assets/card_imgs/img_1.png",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const products = [
     gender: "women",
     price: 220,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_2",
+    imgUrl: "./assets/card_imgs/img_2.png",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const products = [
     gender: "men",
     price: 270,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_3",
+    imgUrl: "./assets/card_imgs/img_3.png",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const products = [
     gender: "women",
     price: 230,
     status: "Out of stock",
-    imgUrl: "https://placehold.co/300x300?text=img_4",
+    imgUrl: "./assets/card_imgs/img_4.png",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const products = [
     gender: "men",
     price: 800,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_5",
+    imgUrl: "./assets/card_imgs/img_5.png",
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const products = [
     gender: "women",
     price: 700,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_6",
+    imgUrl: "./assets/card_imgs/img_6.png",
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const products = [
     gender: "men",
     price: 900,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_7",
+    imgUrl: "./assets/card_imgs/img_7.png",
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const products = [
     gender: "women",
     price: 750,
     status: "Out of stock",
-    imgUrl: "https://placehold.co/300x300?text=img_8",
+    imgUrl: "./assets/card_imgs/img_8.png",
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ const products = [
     gender: "men",
     price: 400,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_9",
+    imgUrl: "./assets/card_imgs/img_9.png",
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ const products = [
     gender: "women",
     price: 350,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_10",
+    imgUrl: "./assets/card_imgs/img_10.png",
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ const products = [
     gender: "men",
     price: 420,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_11",
+    imgUrl: "./assets/card_imgs/img_11.png",
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ const products = [
     gender: "women",
     price: 370,
     status: "Out of stock",
-    imgUrl: "https://placehold.co/300x300?text=img_12",
+    imgUrl: "./assets/card_imgs/img_12.png",
   },
   {
     id: 13,
@@ -101,7 +101,7 @@ const products = [
     gender: "men",
     price: 180,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_13",
+    imgUrl: "./assets/card_imgs/img_13.png",
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ const products = [
     gender: "women",
     price: 160,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_14",
+    imgUrl: "./assets/card_imgs/img_14.png",
   },
   {
     id: 15,
@@ -117,7 +117,7 @@ const products = [
     gender: "men",
     price: 200,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_15",
+    imgUrl: "./assets/card_imgs/img_15.png",
   },
   {
     id: 16,
@@ -125,7 +125,7 @@ const products = [
     gender: "women",
     price: 170,
     status: "Out of stock",
-    imgUrl: "https://placehold.co/300x300?text=img_16",
+    imgUrl: "./assets/card_imgs/img_16.png",
   },
   {
     id: 17,
@@ -133,7 +133,7 @@ const products = [
     gender: "men",
     price: 260,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_17",
+    imgUrl: "./assets/card_imgs/img_17.png",
   },
   {
     id: 18,
@@ -141,7 +141,7 @@ const products = [
     gender: "women",
     price: 240,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_18",
+    imgUrl: "./assets/card_imgs/img_18.png",
   },
   {
     id: 19,
@@ -149,7 +149,7 @@ const products = [
     gender: "men",
     price: 280,
     status: "Out of stock",
-    imgUrl: "https://placehold.co/300x300?text=img_19",
+    imgUrl: "./assets/card_imgs/img_19.png",
   },
   {
     id: 20,
@@ -157,7 +157,7 @@ const products = [
     gender: "women",
     price: 250,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_20",
+    imgUrl: "./assets/card_imgs/img_20.png",
   },
   {
     id: 21,
@@ -165,7 +165,7 @@ const products = [
     gender: "men",
     price: 850,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_21",
+    imgUrl: "./assets/card_imgs/img_21.png",
   },
   {
     id: 22,
@@ -173,7 +173,7 @@ const products = [
     gender: "women",
     price: 720,
     status: "Out of stock",
-    imgUrl: "https://placehold.co/300x300?text=img_22",
+    imgUrl: "./assets/card_imgs/img_22.png",
   },
   {
     id: 23,
@@ -181,7 +181,7 @@ const products = [
     gender: "men",
     price: 920,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_23",
+    imgUrl: "./assets/card_imgs/img_23.png",
   },
   {
     id: 24,
@@ -189,7 +189,7 @@ const products = [
     gender: "women",
     price: 780,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_24",
+    imgUrl: "./assets/card_imgs/img_24.png",
   },
   {
     id: 25,
@@ -197,7 +197,7 @@ const products = [
     gender: "men",
     price: 410,
     status: "Out of stock",
-    imgUrl: "https://placehold.co/300x300?text=img_25",
+    imgUrl: "./assets/card_imgs/img_25.png",
   },
   {
     id: 26,
@@ -205,7 +205,7 @@ const products = [
     gender: "women",
     price: 360,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_26",
+    imgUrl: "./assets/card_imgs/img_26.png",
   },
   {
     id: 27,
@@ -213,7 +213,7 @@ const products = [
     gender: "men",
     price: 430,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_27",
+    imgUrl: "./assets/card_imgs/img_27.png",
   },
   {
     id: 28,
@@ -221,7 +221,7 @@ const products = [
     gender: "women",
     price: 380,
     status: "Out of stock",
-    imgUrl: "https://placehold.co/300x300?text=img_28",
+    imgUrl: "./assets/card_imgs/img_28.png",
   },
   {
     id: 29,
@@ -229,7 +229,7 @@ const products = [
     gender: "men",
     price: 190,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_29",
+    imgUrl: "./assets/card_imgs/img_29.png",
   },
   {
     id: 30,
@@ -237,20 +237,53 @@ const products = [
     gender: "women",
     price: 175,
     status: "In stock",
-    imgUrl: "https://placehold.co/300x300?text=img_30",
+    imgUrl: "./assets/card_imgs/img_30.png",
   },
 ];
 
-///////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const CONTAINER = document.querySelector("#productContainer");
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const TYPE_VALUE = document.querySelector("#typeFilter").value;
+const GENDER_VALUE = document.querySelector("#genderFilter").value;
+const PRICE_VALUE = document.querySelector("#priceFilter").value;
+const STATUS_VALUE = document.querySelector("#statusFilter").value;
+const COUNT_ELEMENT = document.querySelector("#productCount").value;
+
+const CLEAN_BUTTON = document.querySelector("#productClearButton");
+const SEARCH_BUTTON = document.querySelector("#productSearchButton");
+const RESET_BUTTON = document.querySelector("#allFilters");
+const SCROLL_BUTTON = document.querySelector("#scrollToFiltersBtn");
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Функция для отображения товаров
+function createCard(productsToRender) {
+  CONTAINER.innerHTML = ""; //clear script
+
+  productsToRender.forEach((product) => {
+    const CARD = document.createElement("div");
+    CARD.className = "card";
+    CARD.innerHTML = `
+    <img class="card_img" src="${product.imgUrl}" alt="${product.type}">
+    <h3>${product.type}</h3>
+    <p>${product.price} $</p>
+    <p>${product.gender}</p>
+    <div class="card_status">${product.status}</div>
+  `;
+    CONTAINER.append(CARD);
+  });
+}
+
 // Функция для отображения количества товаров
 function updateProductCount(count) {
-  const countElement = document.getElementById("productCount");
-  countElement.textContent = `Products Found (${count}) `;
+  COUNT_ELEMENT.textContent = `Products Found (${count}) `;
 }
 
 // Функция для проверки цены
 function checkPrice(productPrice, filterValue) {
-  if (filterValue === "Default") return true;
+  if (filterValue === "ALL") return true;
 
   if (filterValue === "0-300") return productPrice <= 300;
   if (filterValue === "301-600")
@@ -262,18 +295,11 @@ function checkPrice(productPrice, filterValue) {
 
 // Основная функция фильтрации
 function filterProducts() {
-  const typeValue = document.getElementById("typeFilter").value;
-  const genderValue = document.getElementById("genderFilter").value;
-  const priceValue = document.getElementById("priceFilter").value;
-  const statusValue = document.getElementById("statusFilter").value;
-
   const filteredProducts = products.filter((product) => {
-    const typeMatch = typeValue === "Default" || product.type === typeValue;
-    const genderMatch =
-      genderValue === "Default" || product.gender === genderValue;
-    const priceMatch = checkPrice(product.price, priceValue);
-    const statusMatch =
-      statusValue === "Default" || product.status === statusValue;
+    const typeMatch = TYPE_VALUE === "All" || product.type === TYPE_VALUE;
+    const genderMatch = GENDER_VALUE === "All" || product.gender === GENDER_VALUE;
+    const priceMatch = checkPrice(product.price, PRICE_VALUE);
+    const statusMatch = STATUS_VALUE === "All" || product.status === STATUS_VALUE;
 
     return typeMatch && genderMatch && priceMatch && statusMatch;
   });
@@ -282,58 +308,36 @@ function filterProducts() {
   updateProductCount(filteredProducts.length);
 }
 
-// Функция для отображения товаров
-function createCard(productsToRender) {
-  const container = document.getElementById("productContainer");
-  container.innerHTML = "";
-
-  productsToRender.forEach((product) => {
-    const CARD = document.createElement("div");
-    CARD.className = "card";
-    CARD.innerHTML = `
-        <img class="card_img" src="${product.imgUrl}" alt="${product.type}">
-    <h3>${product.type}</h3>
-    <p>${product.price} $</p>
-    <p>${product.gender}</p>
-    <div class="card_status">${product.status}</div>
-  `;
-    container.appendChild(CARD);
-  });
-}
-
 // Обработчики событий
-document
-  .getElementById("productSearchButton")
-  .addEventListener("click", (e) => {
-    e.preventDefault();
-    filterProducts();
-  });
 
-document.getElementById("productClearButton").addEventListener("click", (e) => {
+SEARCH_BUTTON.addEventListener("click", (e) => {
   e.preventDefault();
-  document.getElementById("allFilters").reset();
+  filterProducts();
+});
+
+CLEAN_BUTTON.addEventListener("click", (e) => {
+  e.preventDefault();
+  RESET_BUTTON.reset();
   filterProducts(); // После сбрасывания фильтров показываем все товары
 });
 
 // Инициализация при загрузке страницы
-document.addEventListener("DOMContentLoaded", () => {
-  createCard(products);
-  updateProductCount(products.length);
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     createCard(products);
+//     updateProductCount(products.length);
+// });
 
 ////////////////////////////////////////////////////////////////
 
-// Получаем кнопку
-const scrollToTopFilters = document.getElementById("scrollToFiltersBtn");
 // Показывать кнопку при прокрутке вниз на 100px
 window.onscroll = function () {
   if (
     document.body.scrollTop > 100 ||
     document.documentElement.scrollTop > 100
   ) {
-    scrollToTopFilters.style.display = "block";
+    SCROLL_BUTTON.style.display = "block";
   } else {
-    scrollToTopFilters.style.display = "none";
+    SCROLL_BUTTON.style.display = "none";
   }
 };
 // При нажатии на кнопку возвращаемся наверх

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ToDoList</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./styles.css" type="text/css"/>
+    <script src=".index.js" defer></script>
+</head>
+<body>
+<div id="root">
+    <form id="form">
+        <input
+                type="text"
+                name="nickname"
+                placeholder="Name"
+                required
+        />
+
+        <input
+                type="text"
+                name="place"
+                placeholder="Place"
+                required
+        />
+        <button type="submit">Add person to list</button>
+        </input>
+    </form>
+    <ul id="person-list"></ul>
+    <div class="btn-container">
+        <button id="clear" class="btn left">Очистить список</button>
+        <button id="clear-one" class="btn right"> Убрать один элемент</button>
+    </div>
+
+</div>
+</body>
+</html>
