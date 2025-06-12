@@ -11,27 +11,25 @@ async function loadWine() {
       cardElement.className = "card";
 
       const avg = rating.average;
-      if (avg >= 4.9) {
-        cardElement.style.backgroundColor = "lightgreen";
-      } else if (avg >= 4.8) {
-        cardElement.style.backgroundColor = "lightblue";
-      }
+      cardElement.style.backgroundColor =
+        avg > 4.8 ? "lightgreen" : "lightblue";
 
-      const wineryElement = document.createElement("div");
+      const wineryElement = document.createElement("p");
       wineryElement.className = "winery";
       wineryElement.textContent = winery;
 
-      const wineElement = document.createElement("div");
+      const wineElement = document.createElement("p");
       wineElement.className = "wine";
       wineElement.textContent = wine;
 
-      const avgElement = document.createElement("div");
+      const avgElement = document.createElement("p");
       avgElement.className = "rating";
       avgElement.textContent = avg;
 
       const imgElement = document.createElement("img");
       imgElement.className = "wine";
       imgElement.src = image;
+      imgElement.alt = wine;
 
       cardElement.append(imgElement, wineryElement, wineElement, avgElement);
       wineContainerElement.append(cardElement);
