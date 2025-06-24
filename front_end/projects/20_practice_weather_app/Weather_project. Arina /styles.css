@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-image: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid rgba(210, 210, 210, 1);
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  background-color: rgba(18, 45, 77, 0.5);
+  backdrop-filter: blur(17.8px);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.weather-form {
+  display: flex;
+  gap: 14px;
+  height: 48px;
+  width: 100%;
+  max-width: 710px;
+}
+
+.city-input {
+  height: 48px;
+  width: 100%;
+  max-width: 550px;
+  min-width: fit-content;
+  padding: 12px 12px 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: none; /* обводка при нажатии*/
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  backdrop-filter: blur(16px);
+}
+
+.city-input::placeholder {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.search-weather-button {
+  height: 48px;
+  min-width: 146px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(54, 120, 180, 1);
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+
+.search-weather-button:disabled {
+  background-color: rgb(125, 152, 177);
+  cursor: not-allowed;
+}
+
+.search-weather-button:not(:disabled):hover {
+  background-color: rgb(68, 130, 188);
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+.info-container {
+  display: none;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  height: fit-content;
+  width: 100%;
+  max-width: 709px;
+  min-width: fit-content;
+}
+
+.current-temperature-container,
+.save-container,
+.feels-like-temperature-container,
+.error-container {
+  border-radius: 25px;
+  background: linear-gradient(
+    133.66deg,
+    rgba(47, 72, 111, 0.62) 5.78%,
+    rgba(11, 27, 52, 0.62) 96.58%
+  );
+  backdrop-filter: blur(8px);
+}
+
+.current-temperature-container,
+.save-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 19px;
+  height: 220px;
+  width: 709px;
+  min-width: fit-content;
+  padding: 16px 27px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 19px;
+  height: 97px;
+  width: 100%;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  max-width: 250px;
+  min-width: fit-content;
+}
+
+.current-temperature {
+  font-size: 57px;
+  font-weight: 500;
+  color: white;
+}
+
+.city {
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+.right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.temp-picture {
+  height: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 95px;
+}
+
+.save-button,
+.delete-button {
+  height: 48px;
+  width: 155px;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+
+.feels-like-temperature-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 141px;
+  width: 223px;
+  padding: 8px 30px;
+}
+
+.top-line {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  height: 23px;
+}
+
+.temp-icon {
+  height: 100%;
+}
+
+.feels-like {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.57);
+}
+
+.feels-like-temperature {
+  font-size: 42px;
+  font-weight: 500;
+  color: white;
+}
+
+.error-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  height: 129px;
+  width: 100%;
+  max-width: 709px;
+  min-width: fit-content;
+  padding: 16px;
+}
+
+.error-code {
+  font-size: 57px;
+  font-weight: 500;
+  color: rgba(243, 94, 94, 1);
+}
+
+.error-message {
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+.loading-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  max-width: 709px;
+  min-width: fit-content;
+  padding: 16px;
+}
+
+.loading-message {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+.history-container {
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 50px;
+  align-items: flex-start;
+  height: fit-content;
+  width: 100%;
+  max-width: 709px;
+  min-width: fit-content;
+}
+
+.history-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 2px solid white;
+}
+
+.saved-city {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.delete-all-button {
+  height: 48px;
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(54, 120, 180, 1);
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-all-button:hover {
+  background-color: rgb(68, 130, 188);
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}

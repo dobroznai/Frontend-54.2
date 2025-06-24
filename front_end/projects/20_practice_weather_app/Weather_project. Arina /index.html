@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Lesson 20: JS, Weather project</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="./assets/weather_icon.png">
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <div class="title">Weather App</div>
+      </header>
+      <main>
+        <form class="weather-form">
+          <input
+            class="city-input"
+            type="text"
+            name="city"
+            placeholder="Enter the city"
+          />
+          <button class="search-weather-button" type="submit">Search</button>
+        </form>
+        <div class="info-container">
+          <div class="current-temperature-container">
+            <div class="main-container">
+              <div class="left-column">
+                <p class="current-temperature"></p>
+                <p class="city"></p>
+              </div>
+              <div class="right-column">
+                <img class="temp-picture" src="" alt="" />
+                <img class="temp-picture" src="" alt="" />
+                <img class="temp-picture" src="" alt="" />
+              </div>
+            </div>
+            <div class="button-container">
+              <button class="save-button" type="button">Save</button>
+              <button class="delete-button" type="button">Delete</button>
+            </div>
+          </div>
+          <div class="feels-like-temperature-container">
+            <div class="top-line">
+              <img class="temp-icon" src="./assets/temperature_icon.png" />
+              <p class="feels-like">FEELS LIKE</p>
+            </div>
+            <div class="bottom-line">
+              <p class="feels-like-temperature"></p>
+            </div>
+          </div>
+        </div>
+        <div class="error-container">
+          <p class="error-code"></p>
+          <p class="error-message"></p>
+        </div>
+        <div class="loading-container">
+          <p class="loading-message">Loading...</p>
+        </div>
+        <div class="history-container">
+          <div class="history-title">History</div>
+          <div class="saved-city"></div>
+          <button class="delete-all-button" type="button">Delete all cards</button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
